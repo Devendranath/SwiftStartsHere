@@ -18,6 +18,9 @@ var typeCastObj = TypeCasting()
 
 typeCastObj.playWithTypeCasting()
 
+var operatorsObj = Operators()
+operatorsObj.playWithOperators()
+
 var optionalObj = Optionals()
 optionalObj.playWithOptionals()
 

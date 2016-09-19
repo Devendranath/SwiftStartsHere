@@ -32,6 +32,8 @@
 		5D9494451D8A7AC500329AC4 /* SwiftKeywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9494441D8A7AC500329AC4 /* SwiftKeywords.swift */; };
 		5D9494481D8A825C00329AC4 /* TypeCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9494471D8A825C00329AC4 /* TypeCasting.swift */; };
 		5D94944B1D8ABE7200329AC4 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94944A1D8ABE7200329AC4 /* Optionals.swift */; };
+		5D94944D1D8FCDD300329AC4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94944C1D8FCDD200329AC4 /* Operators.swift */; };
+		5D94944F1D8FD09400329AC4 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94944E1D8FD09400329AC4 /* ExceptionHandling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +79,8 @@
 		5D9494471D8A825C00329AC4 /* TypeCasting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCasting.swift; sourceTree = "<group>"; };
 		5D9494491D8AAE5300329AC4 /* CourseContent.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = CourseContent.rtf; sourceTree = "<group>"; };
 		5D94944A1D8ABE7200329AC4 /* Optionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
+		5D94944C1D8FCDD200329AC4 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		5D94944E1D8FD09400329AC4 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			children = (
 				1870DE341CEC03A50068446B /* main.swift */,
 				1870DE3B1CEC04350068446B /* Datatypes.swift */,
+				5D94944C1D8FCDD200329AC4 /* Operators.swift */,
 				1870DE8E1CEEBFCA0068446B /* CotrolFlows.swift */,
 				5D9494471D8A825C00329AC4 /* TypeCasting.swift */,
 				1870DE3D1CECD7B50068446B /* Strings.swift */,
@@ -128,6 +133,7 @@
 				183E93B71CF0BA39001EB7E8 /* Classes.swift */,
 				183E93FB1CF68716001EB7E8 /* AccessSpecifiers.swift */,
 				18EE75801CF99C4D009CD3C4 /* Extensions.swift */,
+				5D94944E1D8FD09400329AC4 /* ExceptionHandling.swift */,
 				18EE76411CFA9E2C009CD3C4 /* Dates.swift */,
 				18EE76431CFABBAF009CD3C4 /* WebServices.swift */,
 				18EE76F51CFD3EAB009CD3C4 /* MemoryManagement.swift */,
@@ -207,6 +213,7 @@
 				1870DE8F1CEEBFCA0068446B /* CotrolFlows.swift in Sources */,
 				1870DE481CEE30650068446B /* MyObjcClass.m in Sources */,
 				18473DFF1D098018003530E5 /* KeychainWrapper.m in Sources */,
+				5D94944D1D8FCDD300329AC4 /* Operators.swift in Sources */,
 				18EE76441CFABBAF009CD3C4 /* WebServices.swift in Sources */,
 				5D9494451D8A7AC500329AC4 /* SwiftKeywords.swift in Sources */,
 				1870DE421CED66040068446B /* Sets.swift in Sources */,
@@ -220,6 +227,7 @@
 				18EE76F61CFD3EAB009CD3C4 /* MemoryManagement.swift in Sources */,
 				18EE75811CF99C4D009CD3C4 /* Extensions.swift in Sources */,
 				18EE76421CFA9E2C009CD3C4 /* Dates.swift in Sources */,
+				5D94944F1D8FD09400329AC4 /* ExceptionHandling.swift in Sources */,
 				1870DE3C1CEC04350068446B /* Datatypes.swift in Sources */,
 				183E936A1CEF9842001EB7E8 /* Enums.swift in Sources */,
 				5D9494481D8A825C00329AC4 /* TypeCasting.swift in Sources */,

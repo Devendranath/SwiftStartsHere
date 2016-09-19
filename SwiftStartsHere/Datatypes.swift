@@ -102,3 +102,10 @@ class Datatypes
         NSLog("%i bytes", bytes);
       }
 }
+
+/*
+ 
+ Tasks:
+ i. What are the different datatypes availabel in swift
+ 
+ */
