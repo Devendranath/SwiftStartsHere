@@ -22,10 +22,12 @@ class Datatypes
     Character: Stores single character
     Bool : Stores true / false values
     String: Stores Textual data
+    Tuples: Stores group of values, those can be accessed through index (0 to n-1) or using specific identifiers
     Array: Stores collections of similar or desimillar objects or primitive datatypes 
     Dictionaries: Stores Key - value pairs
     Set: Stores objects or primitive datatypes as unordered collection of elements
     AnyObject: Stores any kind of value
+    
     */
     
     /*
@@ -82,6 +84,19 @@ class Datatypes
         
         let aCharacter = "a"
         print("ASCII Value of a is \(aCharacter.unicodeScalars.first?.value)");
+        
+        let aTuplre = (1, "Two", 3.3 ,"Four")
+        
+        print(aTuplre.0) // 1
+        print(aTuplre.1) // Two
+        print(aTuplre.2) // 3.3
+        print(aTuplre.3) // Four
+        
+        
+        let array = ["One", "Two"]
+        
+        let (rollNo, name, collection) = (1, "Swift", array)
+        print("Course number: \(rollNo) and name is: \(name) and collection is: \(collection)");
         
         // SIZE of the given Datatype. Use sizeof() method to get the size of the given datatype
         print(sizeof(Int))   // 8-Bytes

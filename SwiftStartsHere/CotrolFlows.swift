@@ -112,7 +112,6 @@ class CotrolFlows: NSObject
         
         
         var age = 18
-        
         switch age {
         case 1...17:
             print("You are not allowed to Vote");
@@ -148,15 +147,14 @@ class CotrolFlows: NSObject
         i = 100
         switch i
         {
-        case 1...5:
-            print("Value \(i) is between 1 to 5");
-        case 1...10:
-            print("Value \(i) is between 1 to 10");
-        case 1...2:
-            print("Value \(i) is between 5 to 10");
-        case 100:
+        case 1...25:
+            print("Value \(i) is between 1 to 25");
+        case 26..<50:
+            print("Value \(i) is between 26 to 49");
+        case 50...75:
+            print("Value \(i) is between 50 to 75");
+        case 100, 200: // Multiple values separated by coma
             print("Value is here");
-            fallthrough
         default:
             print("Default case is must in Swift's switch statement");
         }

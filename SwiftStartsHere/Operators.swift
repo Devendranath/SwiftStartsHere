@@ -120,6 +120,9 @@ class Operators: NSObject
         let result = a != 0 ? a : b
         
         print(result) // 10
+        
+        
+        // Range operators are explained in Control Statements
     }
 }
 
@@ -140,4 +143,6 @@ ii. Write a Program to display below output
  5 * 10 = 50
 
  iii. Write a program to display 100, 99, 98 ... 1 values
+ 
+ iv. What are the two new operators available in swift?
 */

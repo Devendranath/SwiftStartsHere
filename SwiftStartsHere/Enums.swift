@@ -7,9 +7,9 @@
 //
 
 import Foundation
+
 class Enums
 {
-    
     func playWithEnums()
     {
         print(WEEKDAY.MONDAY);
@@ -21,18 +21,20 @@ class Enums
             print("")
         }
     }
+    
     // SYNTAX
     /*
-    enum NewDatatype
-    {
-        case valueOne
-        case valueTwo
-        .........
-        .........
-        .........
-        case valueN
-    }
-*/
+     enum NewDatatype
+     {
+     case valueOne
+     case valueTwo
+     .........
+     .........
+     .........
+     case valueN
+     }
+     */
+    
     enum WEEKDAY
     {
         case MONDAY
@@ -54,11 +56,10 @@ class Enums
     
     func isWeekDay(aDay: WEEKDAY) -> String
     {
-        
         print(WEEKDAY.MONDAY);
         print(WEEKDAY.TUESDAY);
         print(WEEKDAY.FRIDAY);
-        switch aDay
+        switch aDay // Enums in Switch
         {
         case .MONDAY:
             return "Monday";
