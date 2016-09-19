@@ -105,8 +105,7 @@ class Arrays
         // Finding the index of the element
         print("Index of :1 is : \(anArray.indexOf(1))")
         // Reversing an Array Elements
-        print(anArray.reverse());
-        
+        print(anArray.reverse());        
         anArray.removeLast(); // Removes last element
         anArray.removeFirst() // Remove first element
         anArray.removeAtIndex(1) //  Removes the 2nd element of an Array
