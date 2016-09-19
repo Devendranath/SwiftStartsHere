@@ -22,9 +22,12 @@ import Foundation
  Logical Operators (&&, ||, !)
  Bitwise Operators (Not Required)
  Assignment Operators (=, +=, -=, *=, /=, %=)
- Conditional Operator (Condition? X : Y)
+ Conditional Operator ( ?: Ex: Condition? X : Y)
  
- NEW: Range Operators(Closed Range(...), Half Open Range(..<))
+ NEW:
+ i. Range Operators(Closed Range(...), Half Open Range(..<))
+ ii. Nil coalescing operator (??)
+ 
  */
 
 
@@ -122,7 +125,9 @@ class Operators: NSObject
         print(result) // 10
         
         
-        // Range operators are explained in Control Statements
+        // i. Range operators are explained in Control Statements
+        
+        // ii. Nil Coalescing operator(??): Discussed during Optionals
     }
 }
 

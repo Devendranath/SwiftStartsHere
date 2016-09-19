@@ -98,6 +98,11 @@ class Datatypes
         let (rollNo, name, collection) = (1, "Swift", array)
         print("Course number: \(rollNo) and name is: \(name) and collection is: \(collection)");
         
+        let course = (name:"Objective-C", year:2014)
+        
+        print("Course name: \(course.name)")
+        print("Introduced in: \(course.year)")
+        
         // SIZE of the given Datatype. Use sizeof() method to get the size of the given datatype
         print(sizeof(Int))   // 8-Bytes
         print(sizeof(Int8))  // 1-Byte
@@ -110,8 +115,7 @@ class Datatypes
         print(sizeof(String))    // 24-Bytes
         print(sizeof(Double))    // 8-Bytes
         print(sizeof(Bool))    // 1-Byte
-        
-        
+                
         let test : String = "A";
         let bytes : NSInteger =   test.lengthOfBytesUsingEncoding(NSUTF8StringEncoding);
         NSLog("%i bytes", bytes);

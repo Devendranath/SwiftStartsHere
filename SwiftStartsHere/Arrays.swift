@@ -9,74 +9,60 @@
 import Foundation
 class Arrays
 {
+    
+    /*
+     Def: Array is collection of Similar / Dissimilar values (Objects / Premitives)
+     
+     Operations:
+     
+     Creating Arrays
+     Counting number of elements in an array
+     Finding the object at given Index
+     Comparing two arrays
+     Iterating through Array Elements
+     Adding elements to an array
+     Inserting an Element at given index
+     Adding two arrays
+     Check object existence in an array
+     Replace object at given index
+     Accessing last object of the array
+     Remove Object at given index
+     Remove Objects in Range
+     Remove all Objects
+     Reversing an Array
+     Finding the index of Element
+ */
+    
+    
     func playWithArrays()
     {
-        var anArray = [1,2,3,4,5];
+        let anEmptyIntArray = [Int](); // Creating an Empty array
         
-        let bArray: Array<Float> = [12.12, 12,22, 12,34];
-        
-        let cArray = [Int](); // Creating an Empty array
-        
-        let dArray:[Int] = [1,2,3,4,5];
-        
-        var eArray = Array<Int>();
-        
-        eArray.append(1);
+        var eArray = Array<Int>();  // Another way to create an Empty Array
         
         
-        print(eArray)
+        let aDifferentValueArray = [1, "Two", 3.3, "C"]
+        
+        let aDubplicateArray = [1, 2, 3, 1, 2, 3]
+        
+        var anArray = [1,2,3,4,5]; // Default different value array
+        
+        let similarToAnArray:[Int] = [1,2,3,4,5]; // Specifying a Type of array
         
         
+        let bArray: Array<Float> = [12.12, 12,22, 12,34]; // Specifying a Type of array
         
+        let similarToBArray: [Float] = [12.12, 12,22, 12,34]; // Specifying a Type of array
         
-        print(anArray);
+        let cArray = [11, 12, 13, 14, 15, 17]
         
-        print(bArray);
+        //let anErrorArray: [String] = [1, "Two"] // ERROR: Expected Strings
         
-        print(cArray);
+        print("Number of elements in an Array \(anArray.count)")
         
-        print(dArray);
+        print("Object at given index 2: \(anArray[2])")
         
-        
-        
-        anArray.append(1100);
-        print(anArray)
-        
-        //        anArray.insertContentsOf([1200, 1211, 1212, 1212, 12, 12], at: 0);
-        print(anArray)
-        
-        if anArray == bArray
-        {
-            print("Two arrays are equal")
-        }
-        
-        anArray.insert(1111, atIndex: 0);
-        print(anArray);
-        
-        anArray.insertContentsOf([123, 231, 321], at: anArray.count)
-        print(anArray); //[1111, 1, 2, 3, 4, 5, 1100, 123, 231, 321]
-        anArray.replaceRange(anArray.startIndex ... anArray.startIndex, with: dArray);
-        
-        print(anArray);
-        
-        print(anArray[12]);
-        
-        eArray[0] = 1;
-        print(eArray);
-        
-
-        print(anArray.reverse());
-        anArray.removeLast(); // Removes last element
-        anArray.removeFirst() // Remove first element
-        anArray.removeFirst(3); // Removes first 3 elements
-        anArray.removeRange(1...5);
-        anArray.removeAll() // Removes all objects
-        print(anArray);
-        
-
-        anArray += dArray;
-        print(anArray);
-        
+        // Iterating through Array elements
         for item in anArray
         {
             print(item);
@@ -87,8 +73,47 @@ class Arrays
             print("\(item) is at index: \(index)");
         }
         
+        if anArray == aDubplicateArray
+        {
+            print("Two arrays are equal")
+        }
+        else
+        {
+            print("Two arrays are not equal")
+        }
         
+        // Adding new element to an Array
+        anArray.append(6); // 1,2,3,4,5,1
+        print(anArray) // 1,2,3,4,5,6
         
+        anArray.insert(0, atIndex: 0);
+        print(anArray); // 0,1,2,3,4,5,6
+        
+        // Inserting multiple objects at given index
+        anArray.insertContentsOf(cArray, at: anArray.count)
+        print(anArray); //0,1,2,3,4,5,6,11,12,13,14,15,17
+        
+        if anArray.contains(11)
+        {
+            print("Element 11 exists in anArray: \(anArray)")
+        }
+        
+        //Replacing object at given index 12
+        anArray[anArray.count - 1] = 16
+        print(eArray);//0,1,2,3,4,5,6,11,12,13,14,15,16
+
+        // Finding the index of the element
+        print("Index of :1 is : \(anArray.indexOf(1))")
+        // Reversing an Array Elements
+        print(anArray.reverse());
+        
+        anArray.removeLast(); // Removes last element
+        anArray.removeFirst() // Remove first element
+        anArray.removeAtIndex(1) //  Removes the 2nd element of an Array
+        anArray.removeFirst(3); // Removes first 3 elements
+        anArray.removeRange(1...5); // Removing objects in Range
+        anArray.removeAll() // Removes all objects
+        print(anArray);
     }
 
 }
