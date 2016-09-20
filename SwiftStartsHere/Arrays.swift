@@ -83,7 +83,7 @@ class Arrays
         }
         
         // Adding new element to an Array
-        anArray.append(6); // 1,2,3,4,5,1
+        anArray.append(6); // 1,2,3,4,5,6
         print(anArray) // 1,2,3,4,5,6
         
         anArray.insert(0, atIndex: 0);

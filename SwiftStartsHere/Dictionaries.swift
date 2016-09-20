@@ -11,9 +11,11 @@ import Foundation
 class Dictionaries: NSObject
 {
     /*
-     Def: UnOrdered Collection of Similar Type Keys and Similar Type Value pairs. Values can be duplicate but keys must be unique. These keys are used as identifiers while accessing elements
+     Def: UnOrdered Collection of Similar Type Keys and Any Type Value pairs. Values can be duplicate but keys must be unique. These keys are used as identifiers while accessing elements
      The values stores in a Dictionary must conforms to Hashable protocol as Sets
      Operations:
+     
+     Creating Dictionaries
      Finding number of pairs in Dictionary
      Comparing Two Dictionaries
      Accessing Perticular Elements based on the key
@@ -32,6 +34,8 @@ class Dictionaries: NSObject
     var aDict: [String:String] = ["Key1":"Value1", "Key2": "Value2", "Key3" : "Value3"]
     
 //    var newDict: Dictionary<String : String> = ["Key1":"Value1", "Key2": "Value2", "Key3" : "Value3"] // Swift 3
+    
+    let o = [1: "Ste", 2: [1,2,3]]
     
     let bDict: [Int : String] = [1:"One", 2 : "Two"]
     

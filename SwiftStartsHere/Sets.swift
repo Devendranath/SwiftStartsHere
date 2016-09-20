@@ -10,9 +10,8 @@ import Foundation
 
 class Sets
 {
- 
     /*
-     Def: Set is a collection of Similar non-dupliate values and these are stored in undefined order
+     Def: Set is a collection of Similar datatype non-dupliate values and these are stored in undefined order
      
      A set stores distinct values of the same type in a collection with no defined ordering. You can use a set instead of an array when the order of items is not important, or when you need to ensure that an item only appears once.
      To Store a Value is Set, It must be hashable
@@ -71,7 +70,6 @@ class Sets
         
         
         // Empty Check
-        
         if aSet.isEmpty
         {
             print("aSet is empty");
