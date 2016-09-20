@@ -46,10 +46,10 @@ class Enums
     
     enum WEEKENDS
     {
-        case SUNDAY, SATURDAY
+        case SUNDAY, SATURDAY // Multiple Cases separated by commas
     }
     
-    enum Month: Int
+    enum Month: Int // Here, Int is a raw value type
     {
         case January = 1, February, March, April, May, June, July, August, September, October, November, December
     }
@@ -59,6 +59,11 @@ class Enums
         print(WEEKDAY.MONDAY);
         print(WEEKDAY.TUESDAY);
         print(WEEKDAY.FRIDAY);
+        
+        // Initilizing with Raw value
+        let december = Month(rawValue: 12)
+        print(december) // 12
+        
         switch aDay // Enums in Switch
         {
         case .MONDAY:

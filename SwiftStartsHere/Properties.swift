@@ -6,8 +6,31 @@
 //
 //
 
+/*
+ Properties associate values in Classes, Structures and Enumeraters
+ Propertioes are two types
+ i. Stored Properties (Stored properties store constant and variable values as part of an instance) (C,S)
+ ii. Computed Properties (Computed properties calculate (rather than store) a value) (C,S,E)
+     Computed Properties provides Getter and Optional setter for setting and getting the values for other properties
+ 
+ iii. Type Properties
+ 
+ iv. Lazy Stored Properties: A lazy stored property is a property whose initial value is not calculated until the first time it is used. You indicate a lazy stored property by writing the lazy modifier before its declaration.
+ lazy variables must be var types, since the value might be setted after initilization
+ 
+ Property Observers can only be added to Stored Properties
+ Stored properties can be either var / let
+ 
+ let constantStructure = aVariableStructure
+ constantStructure.property = aValue // ERROR
+ 
+ let constantClassInstance = aVariableClassInstance
+ constantClassInstance.property = aValue // Not an Error because classes are reference typed
+ 
 
+ */
 
+// URL Ref: https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html#//apple_ref/doc/uid/TP40014097-CH14-ID254
 
 struct MyStructure {
     lazy var aLazyVariable = 10; // lazy can not be applied for let's

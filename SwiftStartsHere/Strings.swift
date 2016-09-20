@@ -185,5 +185,21 @@ class Strings
             print(str.substringToIndex(str.endIndex.predecessor()))// I-Love-Gardening
             print(str.substringFromIndex(str.startIndex.advancedBy(10))) //I-Love-Gard
             
+            // remove in range
+            aString.removeRange(aString.startIndex ... aString.startIndex.advancedBy(3))
+            
+            // Appending String
+            
+            let bString = "One Two Three Four Five"
+            
+            aString = aString.stringByAppendingString(" I already know Obj-C")
+            aString.insertContentsOf(bString.characters, at: aString.startIndex)
+            aString.stringByReplacingOccurrencesOfString("Swift", withString: "Objective-C")
+            
+            
+            
+            let words = bString.componentsSeparatedByString(" ")
+            
+            
         }
 }

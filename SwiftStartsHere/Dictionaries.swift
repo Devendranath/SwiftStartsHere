@@ -19,6 +19,7 @@ class Dictionaries: NSObject
      Finding number of pairs in Dictionary
      Comparing Two Dictionaries
      Accessing Perticular Elements based on the key
+     Adding two dictionaries
      Iterating through Dictionary
      Replacing an Object with another
      Adding Key-Value pairs to a Dictionary
@@ -30,6 +31,8 @@ class Dictionaries: NSObject
   {
     // Creating Dictionaries
     let anEmptyDict = [String:String]()
+    
+    let aDictionary: Dictionary = ["Key1":"Value1", "Key2": "Value2", "Key3" : "Value3"]
     
     var aDict: [String:String] = ["Key1":"Value1", "Key2": "Value2", "Key3" : "Value3"]
     
@@ -60,6 +63,14 @@ class Dictionaries: NSObject
     for (key, value) in aDict
     {
         print("\(key) : \(value)");
+    }
+    
+    let cDict = ["One" : "1", "Two" : "2"]
+    
+    // Adding two dictionaries
+    for (key, value) in cDict
+    {
+        aDict[key] = value
     }
     
     print("Value : \(aDict["Key1"])");
