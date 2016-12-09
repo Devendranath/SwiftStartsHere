@@ -19,6 +19,7 @@ class Dictionaries: NSObject
      Finding number of pairs in Dictionary
      Comparing Two Dictionaries
      Accessing Perticular Elements based on the key
+     Adding an Element to an existing Dictionary
      Adding two dictionaries
      Iterating through Dictionary
      Replacing an Object with another
@@ -66,7 +67,6 @@ class Dictionaries: NSObject
     }
     
     let cDict = ["One" : "1", "Two" : "2"]
-    
     // Adding two dictionaries
     for (key, value) in cDict
     {

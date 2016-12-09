@@ -186,7 +186,7 @@ class Strings
             print(str.substringFromIndex(str.startIndex.advancedBy(10))) //I-Love-Gard
             
             // remove in range
-            aString.removeRange(aString.startIndex ... aString.startIndex.advancedBy(3))
+//            aString.removeRange(aString.startIndex ... aString.startIndex.advancedBy(3))
             
             // Appending String
             

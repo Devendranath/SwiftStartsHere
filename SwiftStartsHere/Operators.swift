@@ -10,7 +10,7 @@ import Foundation
 
 /*
  // OPERATORS
- Def: Operator is a symbol which perform operations on Operands
+ Defination: Operator is a symbol which perform operations on Operands
  Ex: a + b
  Here, a, b are operands and + is Operator
  
@@ -27,9 +27,7 @@ import Foundation
  NEW:
  i. Range Operators(Closed Range(...), Half Open Range(..<))
  ii. Nil coalescing operator (??)
- 
  */
-
 
 class Operators: NSObject
 {
@@ -39,7 +37,6 @@ class Operators: NSObject
         let b = 20
         
         // Arithmetic Operators
-        
         print("Addition is: \(a+b)") // 30
         print("Subtraction: \(a-b)") // -10
         print("Multiply: \(a*b)") // 200
@@ -48,11 +45,11 @@ class Operators: NSObject
         
         print("Pre increment: \(++a)") //11
         print("Post Increment: \(a++)")//11, Value doesn't updated in current statement
-        print("Post Decrement: \(a)")//10
+        print("Current value: \(a)")//10
         
         print("Pre Decrement: \(--a)") // 11
         print("Post Decrement: \(a--)")//11
-        print("Post Decrement: \(a)")//10
+        print("Current value: \(a)")//10
         
         
         // Comparison Operators (>, <, >=, <=, ==, != )

@@ -40,15 +40,24 @@ class Datatypes
     /*
     TYPE ANNOTATION:
     The process of explecitly specifying the type of declared Identifier (constant/variable)
+     
+     TYPE INFERENCE: 
+     Type Inference is a process of identifying the variable datatype based on the input data provided
     */
     
+    var eVar: Int
+    
+    init()
+    {
+        eVar = 10;
+    }
     func playWithDatatypes() -> Void
     {
         let aVar: Int = 10; // Initilizing aVar variable with value 10
         var bVar: Int! // Specifyning to compiler that bVar contains a value
         var cVar: Int? // Specifying to compiler that cVar may or may not have a value (called optional)
         var dVar = 10;
-        //var eVar   // ERROR: Must specify a Datatype/Value while declaring a variable/constant
+        var eVar: Int   // ERROR: Must specify a Datatype/Value while declaring a variable/constant
         
         var anyObj: AnyObject = 20;
         anyObj = "anyObj was holding Int(20), now it is holding String"
@@ -93,10 +102,9 @@ class Datatypes
         print(aTuplre.3) // Four
         
         
-        let array = ["One", "Two"]
+        let (name, pages, price) = ("Swift", 250, 99.00)
         
-        let (rollNo, name, collection) = (1, "Swift", array)
-        print("Course number: \(rollNo) and name is: \(name) and collection is: \(collection)");
+        print("Subject name: \(name) and number of pages: \(pages) and price is: \(price)");
         
         let course = (name:"Objective-C", year:2014)
         
