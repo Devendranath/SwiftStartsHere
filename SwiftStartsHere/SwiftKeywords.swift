@@ -7,6 +7,30 @@
 //
 
 import Foundation
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class SwiftKeywords: NSObject
 {
@@ -22,7 +46,7 @@ class SwiftKeywords: NSObject
         guardKeywordWithOptional(20)
     }
     
-    func optionalBinding(aVar: Int?)
+    func optionalBinding(_ aVar: Int?)
     {
         if let unwrappedVar = aVar
         {
@@ -35,7 +59,7 @@ class SwiftKeywords: NSObject
         print("Can't access unwrappedVar here")
     }
     
-    func guardKeyword(aVar: Int)
+    func guardKeyword(_ aVar: Int)
     {
         guard aVar > 0
             else
@@ -46,7 +70,7 @@ class SwiftKeywords: NSObject
         print("aVar can be used here: \(aVar)")
     }
     
-    func guardKeywordWithOptional(aVar: Int?)
+    func guardKeywordWithOptional(_ aVar: Int?)
     {
         guard let unwrappedVarOne = aVar else
         {
@@ -54,7 +78,7 @@ class SwiftKeywords: NSObject
             return;
         }
         
-        guard let unwrappedVarTwo = aVar where aVar > 0 else
+        guard let unwrappedVarTwo = aVar, aVar > 0 else
         {
             print(" aVar has no value")
             return;

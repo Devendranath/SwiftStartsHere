@@ -20,17 +20,17 @@ class WebServices
     func fetchWeatherDataInSynchronous()
     {
         let urlString = "https://brooke.smartrx.in/apiresult.php"
-        let url = NSURL(string: urlString)
-        let mRequest: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
-        let session = NSURLSession.sharedSession()
-        let dataTask = session.dataTaskWithRequest(mRequest) { (responseData, response, error) -> Void in
+        let url = URL(string: urlString)
+        let mRequest: NSMutableURLRequest = NSMutableURLRequest(url: url!)
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: mRequest, completionHandler: { (responseData, response, error) -> Void in
             
             print("Response received");
             if error != nil
             {
                 print(responseData);
             }
-        }
+        }) 
         dataTask.resume();
     }
     

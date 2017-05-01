@@ -25,7 +25,7 @@ class CotrolFlows: NSObject
     {
         // For Loops
         // ORDINARY FOR LOOP. It is depricated in Swift 3.x
-        for var i = 0; i < 5; i++ // True till the value is 4
+        for i in 0 ..< 5 // True till the value is 4
         {
             print("Hello: %i",i);
         }
@@ -94,7 +94,7 @@ class CotrolFlows: NSObject
         var j = 0
         repeat{
             print(j)
-            j++;
+            j += 1;
         }while j<5;
         
         // 0,1,2,3,4

@@ -46,11 +46,11 @@ class Strings
             print("Number of characters : \(numberOfChracters)");
             
             //Find a Character at given index
-            print("Character at given index: \(aString[aString.startIndex.advancedBy(5)])");
+            print("Character at given index: \(aString[aString.characters.index(aString.startIndex, offsetBy: 5)])");
             
-            print("Last character in a String: \(aString[aString.endIndex.predecessor()])")
+            print("Last character in a String: \(aString[aString.characters.index(before: aString.endIndex)])")
             
-            print(aString[aString.startIndex.successor()]); // 2nd Character in a String
+            print(aString[aString.characters.index(after: aString.startIndex)]); // 2nd Character in a String
             var aStr: String = "I am learning ";
             
             aStr = aStr + "Swift" // I am learning Swift
@@ -91,9 +91,9 @@ class Strings
             
             print("This is lowerase string: \(aStr.lowercaseString)")
             
-            print("This is uppercase string: \(aStr.uppercaseString)")
+            print("This is uppercase string: \(aStr.uppercased())")
             
-            print("This is capitilized string: \(aStr.capitalizedString)")
+            print("This is capitilized string: \(aStr.capitalized)")
             
             print("C string is : \(aStr.utf8)");
             
@@ -105,7 +105,7 @@ class Strings
                 print(char);
             }
             
-            print("Words in a string: \(aStr.componentsSeparatedByString(" "))");
+            print("Words in a string: \(aStr.components(separatedBy: " "))");
             
             let aCharacter: Character = "C";
             
@@ -119,15 +119,15 @@ class Strings
             
             // G
             
-            print(greeting[greeting.endIndex.predecessor()])
+            print(greeting[greeting.characters.index(before: greeting.endIndex)])
             
             // !
             
-            print(greeting[greeting.startIndex.successor()])
+            print(greeting[greeting.characters.index(after: greeting.startIndex)])
             
             // u
             
-            let index = greeting.startIndex.advancedBy(7).successor()
+            let index = <#T##Collection corresponding to your index##Collection#>.index(after: greeting.characters.index(greeting.startIndex, offsetBy: 7))
             
             print(greeting[index])
             
@@ -137,26 +137,26 @@ class Strings
 
             var cString = "Hello";
             
-            aString.insert("-", atIndex: aString.startIndex);
+            aString.insert("-", at: aString.startIndex);
             print(aString);
             
-            aString.removeAtIndex(aString.startIndex);
+            aString.remove(at: aString.startIndex);
             print(aString);
             
-            aString.insertContentsOf("-- ABCDEF ---".characters , at: aString.endIndex);
+            aString.insert(contentsOf: "-- ABCDEF ---".characters , at: aString.endIndex);
             
             print(aString);
             
-            aString.removeAtIndex(aString.startIndex);
+            aString.remove(at: aString.startIndex);
             
-            aString.removeRange(aString.startIndex ... aString.endIndex.predecessor())
+            aString.removeSubrange(aString.startIndex ... aString.characters.index(before: aString.endIndex))
             
             
             print(aString);
             aString.removeAll()
             print(aString);
             
-            cString.insert("!", atIndex: cString.endIndex)
+            cString.insert("!", at: cString.endIndex)
             
             print(cString);
             
@@ -174,16 +174,16 @@ class Strings
             
             let str = "I-Love-Gardening"
             print(str[str.startIndex]) // I
-            print(str[str.startIndex.successor()]) // -
-            print(str[str.endIndex.predecessor()]) // g
-            print(str[str.startIndex.advancedBy(3)])// o
-            print(str[str.endIndex.advancedBy(-2)]) //n
+            print(str[str.characters.index(after: str.startIndex)]) // -
+            print(str[str.characters.index(before: str.endIndex)]) // g
+            print(str[str.characters.index(str.startIndex, offsetBy: 3)])// o
+            print(str[str.characters.index(str.endIndex, offsetBy: -2)]) //n
             
-            let range = Range(start: str.startIndex, end: str.startIndex.advancedBy(5))
+            let range = (str.startIndex ..< str.characters.index(str.startIndex, offsetBy: 5))
             
-            print(str.substringWithRange(range)) // I-Love
-            print(str.substringToIndex(str.endIndex.predecessor()))// I-Love-Gardening
-            print(str.substringFromIndex(str.startIndex.advancedBy(10))) //I-Love-Gard
+            print(str.substring(with: range)) // I-Love
+            print(str.substring(to: str.characters.index(before: str.endIndex)))// I-Love-Gardening
+            print(str.substring(from: str.characters.index(str.startIndex, offsetBy: 10))) //I-Love-Gard
             
             // remove in range
 //            aString.removeRange(aString.startIndex ... aString.startIndex.advancedBy(3))
@@ -192,13 +192,13 @@ class Strings
             
             let bString = "One Two Three Four Five"
             
-            aString = aString.stringByAppendingString(" I already know Obj-C")
-            aString.insertContentsOf(bString.characters, at: aString.startIndex)
-            aString.stringByReplacingOccurrencesOfString("Swift", withString: "Objective-C")
+            aString = aString + " I already know Obj-C"
+            aString.insert(contentsOf: bString.characters, at: aString.startIndex)
+            aString.replacingOccurrences(of: "Swift", with: "Objective-C")
             
             
             
-            let words = bString.componentsSeparatedByString(" ")
+            let words = bString.components(separatedBy: " ")
             
             
         }

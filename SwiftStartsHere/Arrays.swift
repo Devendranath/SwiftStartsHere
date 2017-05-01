@@ -38,10 +38,10 @@ class Arrays
     {
         let anEmptyIntArray = [Int](); // Creating an Empty array
         
-        var eArray = Array<Int>();  // Another way to create an Empty Array
+        let eArray = Array<Int>();  // Another way to create an Empty Array
         
         
-        let aDifferentValueArray = [1, "Two", 3.3, "C"]
+        let aDifferentValueArray = [1, "Two", 3.3, "C"] as [Any]
         
         let aDubplicateArray = [1, 2, 3, 1, 2, 3]
         
@@ -68,7 +68,7 @@ class Arrays
             print(item);
         }
         
-        for (index, item) in anArray.enumerate()
+        for (index, item) in anArray.enumerated()
         {
             print("\(item) is at index: \(index)");
         }
@@ -86,11 +86,11 @@ class Arrays
         anArray.append(6); // 1,2,3,4,5,6
         print(anArray) // 1,2,3,4,5,6
         
-        anArray.insert(0, atIndex: 0);
+        anArray.insert(0, at: 0);
         print(anArray); // 0,1,2,3,4,5,6
         
         // Inserting multiple objects at given index
-        anArray.insertContentsOf(cArray, at: anArray.count)
+        anArray.insert(contentsOf: cArray, at: anArray.count)
         print(anArray); //0,1,2,3,4,5,6,11,12,13,14,15,17
         
         if anArray.contains(11)
@@ -103,14 +103,14 @@ class Arrays
         print(eArray);//0,1,2,3,4,5,6,11,12,13,14,15,16
 
         // Finding the index of the element
-        print("Index of :1 is : \(anArray.indexOf(1))")
+        print("Index of :1 is : \(anArray.index(of: 1))")
         // Reversing an Array Elements
-        print(anArray.reverse());        
+        print(anArray.reversed());        
         anArray.removeLast(); // Removes last element
         anArray.removeFirst() // Remove first element
-        anArray.removeAtIndex(1) //  Removes the 2nd element of an Array
+        anArray.remove(at: 1) //  Removes the 2nd element of an Array
         anArray.removeFirst(3); // Removes first 3 elements
-        anArray.removeRange(1...5); // Removing objects in Range
+        anArray.removeSubrange(1...5); // Removing objects in Range
         anArray.removeAll() // Removes all objects
         print(anArray);
     }

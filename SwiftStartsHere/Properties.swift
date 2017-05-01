@@ -58,7 +58,7 @@ struct Person {
 //        }
 //    }
     
-    func updateUI(msg: String)
+    func updateUI(_ msg: String)
     {
         print(msg)
     }

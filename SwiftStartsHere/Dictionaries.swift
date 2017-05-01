@@ -39,7 +39,7 @@ class Dictionaries: NSObject
     
 //    var newDict: Dictionary<String : String> = ["Key1":"Value1", "Key2": "Value2", "Key3" : "Value3"] // Swift 3
     
-    let o = [1: "Ste", 2: [1,2,3]]
+    let o = [1: "Ste", 2: [1,2,3]] as [Int : Any]
     
     let bDict: [Int : String] = [1:"One", 2 : "Two"]
     
@@ -82,7 +82,7 @@ class Dictionaries: NSObject
     }
     
     // Removing a Key-Value pair from a Dictionary
-    aDict.removeValueForKey("Key1");
+    aDict.removeValue(forKey: "Key1");
     aDict["Key3"] = nil;
     // Removing all Objects from Dictionary
     aDict.removeAll()

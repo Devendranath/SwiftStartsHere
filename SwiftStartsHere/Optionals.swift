@@ -66,7 +66,7 @@ class Optionals
 //        sum = implicitUnwrapOptional + anOptionalInt!; //Error: ImplicitUnwrapOptional must be initilized before it is used.
         implicitUnwrapOptional = 20;
         
-        if let valueInOptional = anOptionalInt,valueInImplicitOptional = implicitUnwrapOptional
+        if let valueInOptional = anOptionalInt,let valueInImplicitOptional = implicitUnwrapOptional
         {
             sum = valueInOptional + valueInImplicitOptional; // Causes error, since anOptionalInt doesn't contain non nil value.
             print("Sum is : \(sum)")

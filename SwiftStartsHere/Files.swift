@@ -13,12 +13,12 @@ class Files
     {
         // Creating a file manager instance 
         
-        let fileManager = NSFileManager.defaultManager()
+        let fileManager = FileManager.default
         
         let filePath = "/Applications"
         // Check file existence at given path
         
-        if fileManager.fileExistsAtPath(filePath)
+        if fileManager.fileExists(atPath: filePath)
         {
             print("File exists")
         }
@@ -29,7 +29,7 @@ class Files
         
         
         // Comparing contents of two files
-        if fileManager.contentsEqualAtPath(filePath, andPath: filePath)
+        if fileManager.contentsEqual(atPath: filePath, andPath: filePath)
         {
             print("File contents match")
         }
@@ -39,7 +39,7 @@ class Files
         }
         
         // Check  wheather the file is writable or not
-        if fileManager.isWritableFileAtPath(filePath)
+        if fileManager.isWritableFile(atPath: filePath)
         {
             print("File is writable")
         }
@@ -51,7 +51,7 @@ class Files
         // Moving contents of one path to another
         do
         {
-             try fileManager.moveItemAtPath(filePath, toPath: filePath)
+             try fileManager.moveItem(atPath: filePath, toPath: filePath)
         }
         catch let error as NSError
         {
@@ -69,7 +69,7 @@ class Files
         
         // Removing items at path
         do{
-            try fileManager.removeItemAtPath(filePath)
+            try fileManager.removeItem(atPath: filePath)
         }
         catch let error as NSError
         {
@@ -77,7 +77,7 @@ class Files
         }
         
         let dirPaths = NSSearchPathForDirectoriesInDomains(
-            .DocumentDirectory, .UserDomainMask, true)
+            .documentDirectory, .userDomainMask, true)
         
         var docsPath: String = dirPaths[0];
         
@@ -85,7 +85,7 @@ class Files
         print(docsPath);
         
         do{
-           try fileManager.createDirectoryAtPath(docsPath, withIntermediateDirectories: false, attributes: nil)
+           try fileManager.createDirectory(atPath: docsPath, withIntermediateDirectories: false, attributes: nil)
         }
         catch
         {
@@ -93,10 +93,10 @@ class Files
         }
         
         // Path of the application Bundle
-        print(NSBundle.mainBundle().resourcePath);
+        print(Bundle.main.resourcePath);
         
         // Path of the specific resource which is there in bundle
-        print(NSBundle.mainBundle().pathForResource("Filename", ofType: "Extension"));
+        print(Bundle.main.path(forResource: "Filename", ofType: "Extension"));
         
     }
     

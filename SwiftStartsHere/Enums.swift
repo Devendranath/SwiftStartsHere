@@ -12,11 +12,11 @@ class Enums
 {
     func playWithEnums()
     {
-        print(WEEKDAY.MONDAY);
-        print(WEEKDAY.THURSDAY);
-        isWeekDay(.MONDAY);
+        print(WEEKDAY.monday);
+        print(WEEKDAY.thursday);
+        isWeekDay(.monday);
         
-        if Month.January.rawValue == 1
+        if Month.january.rawValue == 1
         {
             print("")
         }
@@ -37,28 +37,28 @@ class Enums
     
     enum WEEKDAY
     {
-        case MONDAY
-        case TUESDAY
-        case WEDNEDAY
-        case THURSDAY
-        case FRIDAY
+        case monday
+        case tuesday
+        case wedneday
+        case thursday
+        case friday
     }
     
     enum WEEKENDS
     {
-        case SUNDAY, SATURDAY // Multiple Cases separated by commas
+        case sunday, saturday // Multiple Cases separated by commas
     }
     
     enum Month: Int // Here, Int is a raw value type
     {
-        case January = 1, February, March, April, May, June, July, August, September, October, November, December
+        case january = 1, february, march, april, may, june, july, august, september, october, november, december
     }
     
-    func isWeekDay(aDay: WEEKDAY) -> String
+    func isWeekDay(_ aDay: WEEKDAY) -> String
     {
-        print(WEEKDAY.MONDAY);
-        print(WEEKDAY.TUESDAY);
-        print(WEEKDAY.FRIDAY);
+        print(WEEKDAY.monday);
+        print(WEEKDAY.tuesday);
+        print(WEEKDAY.friday);
         
         // Initilizing with Raw value
         let december = Month(rawValue: 12)
@@ -66,15 +66,15 @@ class Enums
         
         switch aDay // Enums in Switch
         {
-        case .MONDAY:
+        case .monday:
             return "Monday";
-        case .TUESDAY:
+        case .tuesday:
             return "Tuesday";
-        case .WEDNEDAY:
+        case .wedneday:
             return "Wednesday";
-        case .THURSDAY:
+        case .thursday:
             return "Thursday";
-        case WEEKDAY.FRIDAY:
+        case WEEKDAY.friday:
             return "Friday";
         default:
             return "Not a weekday";

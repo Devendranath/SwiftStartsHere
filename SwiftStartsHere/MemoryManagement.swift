@@ -13,7 +13,7 @@ class MemoryManagement
     func playWithreferences()
     {
         var aHuman: Human? = Human(aName: "DevReddy")
-        var aHeart: Heart? = Heart(pulse: 72)
+        let aHeart: Heart? = Heart(pulse: 72)
         
         aHuman?.aHeart = aHeart;
         aHeart?.aOwner = aHuman;

@@ -12,9 +12,9 @@
     func run() // Required
     func walk() // Required
     
-    optional func playCricket() // Optional
-    optional func playFootball() // Optional
-    optional func playBaseball() // Optional
+    @objc optional func playCricket() // Optional
+    @objc optional func playFootball() // Optional
+    @objc optional func playBaseball() // Optional
 }
 
 

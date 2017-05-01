@@ -76,15 +76,15 @@ class Sets
         }
         
         // Joining all elements into a string
-        print(aSet.joinWithSeparator(" ")); // Five Two One Three Four New Element
+        print(aSet.joined(separator: " ")); // Five Two One Three Four New Element
 
-        print(aSet.maxElement()); // Z
+        print(aSet.max()); // Z
         
         // Removing perticular element
         aSet.remove("One");
         
         // Sorting
-        print(aSet.sort()); // ["Five", "Four", "New Element", "Three", "Two", "z"]
+        print(aSet.sorted()); // ["Five", "Four", "New Element", "Three", "Two", "z"]
         
         // Enumerating through collections
         for item in aSet
@@ -95,13 +95,13 @@ class Sets
         let cSet: Set<String> = ["1", "2", "3", "4", "5", "6"];
         let dSet: Set<String> = [ "4", "5", "6", "7", "8", "9"];
         
-        print(cSet.subtract(dSet)); // 1, 2, 3
+        print(cSet.subtracting(dSet)); // 1, 2, 3
         
         print(cSet.union(dSet)); // 1, 2, 3, 4, 5, 6, 7, 8, 9
         
-        print(cSet.intersect(dSet)); // 4, 5, 6
+        print(cSet.intersection(dSet)); // 4, 5, 6
         
-        print(cSet.exclusiveOr(dSet)); //1, 2, 3, 7, 8, 9
+        print(cSet.symmetricDifference(dSet)); //1, 2, 3, 7, 8, 9
         
         // Removing all objects
         aSet.removeAll()

@@ -102,12 +102,12 @@ class Functions: NSObject
         print("Hello, world!");
     }
     
-    func methodWithSingleInputArgAndNoReturn(name: String)-> Void
+    func methodWithSingleInputArgAndNoReturn(_ name: String)-> Void
     {
         print("Hello \(name)");
     }
     
-    func methodWithMultipleArgsAndNoReturn(name: String, phNo: Int) -> Void
+    func methodWithMultipleArgsAndNoReturn(_ name: String, phNo: Int) -> Void
     {
         print("Hello! I am \(name), my Phone Number is : \(phNo)")
     }
@@ -117,17 +117,17 @@ class Functions: NSObject
         return "Hello World!";
     }
     
-    func methodWithSingleInputWithReturn(name: String) -> String
+    func methodWithSingleInputWithReturn(_ name: String) -> String
     {
         return "Hello \(name)";
     }
     
-    func methodWithMultipleArgsWithReturn(name: String, phNo: Int) -> String
+    func methodWithMultipleArgsWithReturn(_ name: String, phNo: Int) -> String
     {
         return "Hello! I am \(name), my Phone Number is : \(phNo)"
     }
     
-    func methodWithOptionalInputAndOptionalReturn(aValue: Int?) -> Int?
+    func methodWithOptionalInputAndOptionalReturn(_ aValue: Int?) -> Int?
     {
         if let inValue = aValue
         {
@@ -139,13 +139,13 @@ class Functions: NSObject
         }
     }
     
-    func methodWithTupleInputAndTupleReturn(inTuple: (firstValue: Int, secondValue: Int)) -> (firstValue: AnyObject, secondValue: AnyObject)
+    func methodWithTupleInputAndTupleReturn(_ inTuple: (firstValue: Int, secondValue: Int)) -> (firstValue: AnyObject, secondValue: AnyObject)
     {
-        return (inTuple.secondValue, inTuple.firstValue);
+        return (inTuple.secondValue as AnyObject, inTuple.firstValue as AnyObject);
     }
     
     // Variadic Parameters
-    func methodWithVariableNumberOfArgs(inputs: String...)
+    func methodWithVariableNumberOfArgs(_ inputs: String...)
     {
         print(inputs);
     }
@@ -158,13 +158,14 @@ class Functions: NSObject
      
      */
     
-    func methodWithValuesAsInputs(var aVar: Int, var bVar: Int)
+    func methodWithValuesAsInputs(_ aVar: Int, bVar: Int)
     {
+        var aVar = aVar, bVar = bVar
         aVar = 20;
         bVar = 30;
     }
     
-    func methodWithReferencesAsInputs(inout aVar:Int, inout bVar: Int)
+    func methodWithReferencesAsInputs(_ aVar:inout Int, bVar: inout Int)
     {
         aVar  = 20;
         bVar = 30;
@@ -185,7 +186,7 @@ class Functions: NSObject
         innerFunction()
     }
     
-    func methodWithDefautValue(name: String = "Dev")
+    func methodWithDefautValue(_ name: String = "Dev")
     {
         print("Hello \(name)");
     }
@@ -195,7 +196,7 @@ class Functions: NSObject
      You can make a function accept parameters of different types while making sure that
      both parameters are of the same type
      */
-    func valueSwap<Int>(inout value1: Int, inout value2: Int)
+    func valueSwap<Int>(_ value1: inout Int, value2: inout Int)
     {
         let oldValue1 = value1
         value1 = value2
@@ -204,9 +205,9 @@ class Functions: NSObject
     
     // NESTED FUNCTIONS
     
-    func nestedFunction(someNumber: Int)
+    func nestedFunction(_ someNumber: Int)
     {
-        func increment( someNumber: Int) -> Int
+        func increment( _ someNumber: Int) -> Int
         {
             return someNumber + 10
         }
@@ -227,13 +228,13 @@ class Functions: NSObject
     }
     
     // Function with two input args and Int reuturn value
-    func addition(aValue: Int, bValue: Int) -> Int
+    func addition(_ aValue: Int, bValue: Int) -> Int
     {
         return aValue + bValue;
     }
     
     // Function with Three input args and Int reuturn value
-    func subtract(aValue: Int, with bValue:Int, and cValue:Float) -> Int
+    func subtract(_ aValue: Int, with bValue:Int, and cValue:Float) -> Int
     {
         return aValue - bValue - Int(cValue);
     }
@@ -243,9 +244,10 @@ class Functions: NSObject
         return (10, 10);
     }
     
-    func optionalReturnMethod(var input: Int)-> Int?
+    func optionalReturnMethod(_ input: Int)-> Int?
     {
-        input++;
+        var input = input
+        input += 1;
         
         if input <= 1
         {
@@ -254,7 +256,7 @@ class Functions: NSObject
         return nil;
     }
     
-    func swapTwoInts(inout a: Int, inout b: Int) {
+    func swapTwoInts(_ a: inout Int, b: inout Int) {
         let temporaryA = a
         a = b
         b = temporaryA

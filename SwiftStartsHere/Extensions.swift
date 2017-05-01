@@ -26,7 +26,7 @@ extension String
         }
     };
     
-    func newMethodInString(sampleString: String) -> Void
+    func newMethodInString(_ sampleString: String) -> Void
     {
         
     }
@@ -50,14 +50,14 @@ class Extensions: NSObject
 {
    func playWithExtensions()
    {
-    var aString: String = "Hello";
+    let aString: String = "Hello";
     
     aString.aNewMethod();
 //    aString.newExtProperty = "This is new property";
     aString.aNewMethod()
     
     
-        var sExtString = String()
+        let sExtString = String()
         sExtString.newMethodInString("Hmm");
 //        sExtString.extPropertyOne = 10;
         print(sExtString.lowercaseString)

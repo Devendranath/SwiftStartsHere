@@ -14,6 +14,8 @@ import Foundation
 class Datatypes
 {
     /*
+     I am ramanaReddy.A
+     
     DATATYPE: Datatype specifies to compiler that what kind of value the variable stores
     Swift provided following datatypes
     Int : stores integer values
@@ -59,8 +61,8 @@ class Datatypes
         var dVar = 10;
         var eVar: Int   // ERROR: Must specify a Datatype/Value while declaring a variable/constant
         
-        var anyObj: AnyObject = 20;
-        anyObj = "anyObj was holding Int(20), now it is holding String"
+        var anyObj: AnyObject = 20 as AnyObject;
+        anyObj = "anyObj was holding Int(20), now it is holding String" as AnyObject
         
         let aConst: Int = 20;
         //aConst = 50; // ERROR: constant values can not be modified
@@ -87,8 +89,8 @@ class Datatypes
         print(aIntConst)
         print(aIntVariable)
         
-        var aFloat: Float = 12.12
-        var aDouble: Double = 11.11
+        let aFloat: Float = 12.12
+        let aDouble: Double = 11.11
         print(aFloat + Float(aDouble))        
         
         let aCharacter = "a"
@@ -112,20 +114,20 @@ class Datatypes
         print("Introduced in: \(course.year)")
         
         // SIZE of the given Datatype. Use sizeof() method to get the size of the given datatype
-        print(sizeof(Int))   // 8-Bytes
-        print(sizeof(Int8))  // 1-Byte
-        print(sizeof(Int16)) // 2-Bytes
-        print(sizeof(Int32)) // 4-Bytes
-        print(sizeof(Int64)) // 8-Bytes
+        print(MemoryLayout<Int>.size)   // 8-Bytes
+        print(MemoryLayout<Int8>.size)  // 1-Byte
+        print(MemoryLayout<Int16>.size) // 2-Bytes
+        print(MemoryLayout<Int32>.size) // 4-Bytes
+        print(MemoryLayout<Int64>.size) // 8-Bytes
         
-        print(sizeof(Float)) // 4-Bytes
-        print(sizeof(Character)) // 9-Bytes
-        print(sizeof(String))    // 24-Bytes
-        print(sizeof(Double))    // 8-Bytes
-        print(sizeof(Bool))    // 1-Byte
+        print(MemoryLayout<Float>.size) // 4-Bytes
+        print(MemoryLayout<Character>.size) // 9-Bytes
+        print(MemoryLayout<String>.size)    // 24-Bytes
+        print(MemoryLayout<Double>.size)    // 8-Bytes
+        print(MemoryLayout<Bool>.size)    // 1-Byte
                 
         let test : String = "A";
-        let bytes : NSInteger =   test.lengthOfBytesUsingEncoding(NSUTF8StringEncoding);
+        let bytes : NSInteger =   test.lengthOfBytes(using: String.Encoding.utf8);
         NSLog("%i bytes", bytes);
       }
 }

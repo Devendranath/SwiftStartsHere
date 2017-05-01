@@ -29,7 +29,7 @@ class TypeCasting: NSObject
     {
         var aInt:Int = 10
         var aFloat: Float = 12.12
-        var aDouble: Double = 12.12
+        let aDouble: Double = 12.12
         var defaultDouble = 21.12212; // By default, floats are Doubles
         var aChar: Character? = "1"
         var aString: String = "1"
@@ -86,7 +86,7 @@ class TypeCasting: NSObject
         aString = String(aInt)
         aString = String(aFloat)
         aString = String(aDouble)
-        aString = String(aChar)
+        aString = String(describing: aChar)
         
         // Conversion of Characters
         var newInt = 1;

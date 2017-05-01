@@ -28,16 +28,16 @@
 
 class AccessSpecifiers: NSObject
 {
-    public var aPublicVar = 10;
-    private var aPrivateVar = 20;
+    open var aPublicVar = 10;
+    fileprivate var aPrivateVar = 20;
     internal var aInternalVar = 30
     
-    public func aPublicMethod()
+    open func aPublicMethod()
     {
         print("This is a Public Method")
     }
     
-    private func aPrivateMethod()
+    fileprivate func aPrivateMethod()
     {
         print("This is a Private Method")
     }
