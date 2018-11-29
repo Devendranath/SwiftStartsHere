@@ -65,7 +65,7 @@ class Datatypes
         
         var anyObj: AnyObject = 20 as AnyObject;
         anyObj = "anyObj was holding Int(20), now it is holding String" as AnyObject
-        
+        let aInt: Int = 0
         let aConst: Int = 20;
         //aConst = 50; // ERROR: constant values can not be modified
         
