@@ -24,6 +24,7 @@
 		1870DE441CED801B0068446B /* Dictionaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870DE431CED801B0068446B /* Dictionaries.swift */; };
 		1870DE481CEE30650068446B /* MyObjcClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1870DE471CEE30650068446B /* MyObjcClass.m */; };
 		1870DE8F1CEEBFCA0068446B /* CotrolFlows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870DE8E1CEEBFCA0068446B /* CotrolFlows.swift */; };
+		189F701621AF961B0054E5F5 /* NewFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F701521AF961B0054E5F5 /* NewFeature.swift */; };
 		18EE75811CF99C4D009CD3C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE75801CF99C4D009CD3C4 /* Extensions.swift */; };
 		18EE76421CFA9E2C009CD3C4 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE76411CFA9E2C009CD3C4 /* Dates.swift */; };
 		18EE76441CFABBAF009CD3C4 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE76431CFABBAF009CD3C4 /* WebServices.swift */; };
@@ -70,6 +71,7 @@
 		1870DE461CEE30650068446B /* MyObjcClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyObjcClass.h; sourceTree = "<group>"; };
 		1870DE471CEE30650068446B /* MyObjcClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyObjcClass.m; sourceTree = "<group>"; };
 		1870DE8E1CEEBFCA0068446B /* CotrolFlows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CotrolFlows.swift; sourceTree = "<group>"; };
+		189F701521AF961B0054E5F5 /* NewFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeature.swift; sourceTree = "<group>"; };
 		18EE75801CF99C4D009CD3C4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		18EE76411CFA9E2C009CD3C4 /* Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		18EE76431CFABBAF009CD3C4 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				1870DE341CEC03A50068446B /* main.swift */,
 				1870DE3B1CEC04350068446B /* Datatypes.swift */,
 				5D94944C1D8FCDD200329AC4 /* Operators.swift */,
+				189F701521AF961B0054E5F5 /* NewFeature.swift */,
 				1870DE8E1CEEBFCA0068446B /* CotrolFlows.swift */,
 				5D9494471D8A825C00329AC4 /* TypeCasting.swift */,
 				1870DE3D1CECD7B50068446B /* Strings.swift */,
@@ -230,6 +233,7 @@
 				18EE76421CFA9E2C009CD3C4 /* Dates.swift in Sources */,
 				5D94944F1D8FD09400329AC4 /* ExceptionHandling.swift in Sources */,
 				1870DE3C1CEC04350068446B /* Datatypes.swift in Sources */,
+				189F701621AF961B0054E5F5 /* NewFeature.swift in Sources */,
 				183E936A1CEF9842001EB7E8 /* Enums.swift in Sources */,
 				5D9494481D8A825C00329AC4 /* TypeCasting.swift in Sources */,
 			);
