@@ -16,7 +16,7 @@
             startingLineNumber = "126"
             endingLineNumber = "126"
             landmarkName = "playWithControlFlow()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,7 +32,7 @@
             startingLineNumber = "148"
             endingLineNumber = "148"
             landmarkName = "playWithControlFlow()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

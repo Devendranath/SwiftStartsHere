@@ -60,6 +60,8 @@ class Datatypes
         var cVar: Int? // Specifying to compiler that cVar may or may not have a value (called optional)
         var dVar = 10;
         var eVar: Int   // ERROR: Must specify a Datatype/Value while declaring a variable/constant
+        // Adding new variable
+        let aBool: Bool = true
         
         var anyObj: AnyObject = 20 as AnyObject;
         anyObj = "anyObj was holding Int(20), now it is holding String" as AnyObject
